@@ -1,0 +1,37 @@
+remember to install express
+-npm install express
+
+Command to post a job
+- curl -X POST http://localhost:8080/submit
+
+Command to check the job status as it progresses, you need to take the job number from
+the job you posted above( replace the hashtags with the job number you get after posting a job ) 
+(You need to run the command continuously to see it progress)
+-  curl http://localhost:8080/checkstatus?jobId=job:####
+
+- the progress of your request will be in your debug console
+
+---------------------------------------------------------------------------------------------------------------------
+
+remember to install express
+-npm install express
+
+
+
+RUN via CHROME
+
+Command to post a job
+- fetch("http://localhost:8080/submit", {"method": "POST"}).then(a=>a.text()).then(console.log)
+
+Command to check the job status as it progresses, you need to take the job number from
+the job you posted above( replace the hashtags with the job number you get after posting a job ) 
+(You need to run the command continuously to see it progress)
+-  fetch("http://localhost:8080/checkstatus?jobId=job:####").then(a=>a.text()).then(console.log)
+
+- the progress of your request will be in your debug console
+
+In order to see The Connection Pool
+---- Submit a job
+---- Send multiple read request
+---- Go to the network tab
+            (You'll be able to see that it block request after a certain amount due to other request still being in progress)

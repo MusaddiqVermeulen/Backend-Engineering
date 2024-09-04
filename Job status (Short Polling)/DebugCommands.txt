@@ -1,0 +1,10 @@
+remember to install express
+-npm install express
+
+Command to post a job
+- curl -X POST http://localhost:8080/submit
+
+Command to check the job status as it progresses, you need to take the job number from
+the job you posted above( replace the hashtags with the job number you get after posting a job ) 
+(You need to run the command continuously to see it progress)
+-  curl http://localhost:8080/checkstatus?jobId=job:####

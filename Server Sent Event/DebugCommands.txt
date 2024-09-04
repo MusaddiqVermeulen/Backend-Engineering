@@ -1,0 +1,27 @@
+*Client Code in order to witness the Server event*
+
+First you need to npm install express (the npm package you'll be making use of)
+
+After going to the port in chrome (localhost:8888), when running the code via node js
+
+#######################################################################################################################################################
+        YOu'll need to put the below command in the console 
+            ~ ( then go to your network tab, 
+                double client on the stream and it will show the server event responses on screen )        
+                    
+                OR just add /stream to your http link
+
+                OR after going to the network tab and clicking on the stream(get) then go to EventStream or Response sub tab inside of stream
+
+            You can check the stream to make sure that the get is operating but look at the status
+
+#######################################################################################################################################################
+
+const sse = new EventSource("http://localhost:8888/stream");
+
+
+
+#### The below is just to see the server event messages appear in the console ####
+               #### Try and figure out why the below isn't working ###
+
+sse.onmessage = console.log
